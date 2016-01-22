@@ -27,6 +27,13 @@ import java.util.Properties;
 /**
  * @author zhangnaibin
  * @Date 2015-12-18 上午11:41
+ *
+   <dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.5</version>
+   </dependency>
+ *
  */
 public class MailUtil {
     protected static final Logger LOG = LoggerFactory.getLogger(MailUtil.class);

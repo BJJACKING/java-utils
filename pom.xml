@@ -51,6 +51,7 @@
             <version>1.7.13</version>
         </dependency>
 
+        <!-- 发送邮件 -->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
@@ -79,6 +80,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>3.9</version>
+        </dependency>
+
+        <!-- DateTime 依赖包-->
+        <dependency>
+            <groupId>org.jruby</groupId>
+            <artifactId>jruby-complete</artifactId>
+            <version>1.6.5</version>
         </dependency>
 
     </dependencies>
