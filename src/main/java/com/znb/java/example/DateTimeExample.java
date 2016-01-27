@@ -1,6 +1,7 @@
 package com.znb.java.example;
 
 import org.joda.time.DateTime;
+import org.joda.time.format.ISODateTimeFormat;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -16,6 +17,7 @@ import java.util.Locale;
     <version>1.6.5</version>
  * </dependency>
  *
+ * 官网地址：http://joda-time.sourceforge.net/cal_iso.html
  */
 public class DateTimeExample {
     public static void main(String[] args) {
@@ -30,5 +32,7 @@ public class DateTimeExample {
         Calendar cal = dateTime2.toCalendar(new Locale("zh", "ZH")); // 转为Calendar格式
         Date date = dateTime.toDate(); // 转为java的Date格式
         System.out.println(dateTime2.toString("yy/MM/dd HH:mm:ss EE"));
+
+        ISODateTimeFormat.basicDate(); // 可以直接获取，不过需要知道样式
     }
 }
