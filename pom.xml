@@ -89,6 +89,13 @@
             <version>1.6.5</version>
         </dependency>
 
+        <!-- google 工具包 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

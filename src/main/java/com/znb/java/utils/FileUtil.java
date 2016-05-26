@@ -20,4 +20,8 @@ public class FileUtil {
         });
         return files;
     }
+
+    public static void main(String[] args) {
+        System.out.println("znb");
+    }
  }

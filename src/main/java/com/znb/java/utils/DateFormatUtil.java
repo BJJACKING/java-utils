@@ -1,5 +1,7 @@
 package com.znb.java.utils;
 
+import org.apache.commons.lang3.StringUtils;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,5 +57,37 @@ public class DateFormatUtil {
             LOG.error("paser data exception, date:{} exception:{}", strDate, e);
             return new Date();
         }
+    }
+
+    /**
+     * 获取结束时间,默认一天前
+     * @param date
+     * @return
+     */
+    public static String getEndTime(String date) {
+        if (StringUtils.isEmpty(date)) {
+            DateTime dt = new DateTime(System.currentTimeMillis());
+            dt = dt.minusDays(1);
+            date = dt.toString(FORMAT1);
+        }
+        return date;
+    }
+
+    /**
+     * 获取开始时间,默认3个月前
+     * @param date
+     * @return
+     */
+    public static String getStartDate(String date) {
+        if (StringUtils.isEmpty(date)) {
+            DateTime dt = new DateTime(System.currentTimeMillis());
+            dt = dt.minusMonths(1);
+            date = dt.toString(FORMAT1);
+        }
+        return date;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(DateFormatUtil.parse("2016-12-04 12:24:35", DateFormatUtil.FORMAT4).getTime());
     }
 }
